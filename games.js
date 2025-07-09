@@ -6,14 +6,16 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).on("keydown touchstart", function () {
+function startGame() {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
-});
+}
 
+$(document).on("keydown touchstart", startGame);
+$("#level-title").on("touchstart", startGame);
 
 $(".btn").click(function () {
     var userChosenColour = $(this).attr("id");
