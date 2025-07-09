@@ -26,7 +26,7 @@ Each level adds a new color, and the game continues until you make a mistake.
 
 ## 🚀 Live Demo
 
-👉 [Click here to play the game](https://your-username.github.io/simon-game/)  
+👉 🚀 [Click here to try it out!](https://archivee09.github.io/Simon-game/)
 
 ## 📂 Folder Structure
 - index.html
