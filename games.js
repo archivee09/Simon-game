@@ -6,16 +6,13 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-function startGame() {
+$(document).keypress(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
-}
-
-$(document).on("keydown touchstart", startGame);
-$("#level-title").on("touchstart", startGame);
+});
 
 $(".btn").click(function () {
     var userChosenColour = $(this).attr("id");
@@ -44,7 +41,7 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game Over, Tap or Press Any Key to Restart");
+        $("#level-title").text("Game Over, Press Any Key to Restart");
         startOver();
     }
 }
