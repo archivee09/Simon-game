@@ -7,13 +7,13 @@ var started = false;
 var level = 0;
 
 $(document).on("keydown touchstart", function () {
-{
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
 });
+
 
 $(".btn").click(function () {
     var userChosenColour = $(this).attr("id");
